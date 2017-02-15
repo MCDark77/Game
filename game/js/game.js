@@ -24,10 +24,10 @@ MainGame.prototype =
 
 	preload: function() 
 	{
-		game.load.image("Player", "http://192.168.178.43:7799/img/Player.png");
-		game.load.tilemap('test', 'http://192.168.178.43:7799/Map/test.json', null, Phaser.Tilemap.TILED_JSON);
-		game.load.image('dirt', 'http://192.168.178.43:7799/Map/Textures/Dirt.png');
-		game.load.spritesheet('spl', 'http://192.168.178.43:7799/img/spritesheet/Player.png', 48, 64);
+		game.load.image("Player", "img/Player.png");
+		game.load.tilemap('test', 'Map/test.json', null, Phaser.Tilemap.TILED_JSON);
+		game.load.image('dirt', 'Map/Textures/Dirt.png');
+		game.load.spritesheet('spl', 'img/spritesheet/Player.png', 48, 64);
 	},
 	
 		
