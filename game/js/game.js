@@ -82,7 +82,8 @@ MainGame.prototype =
     *game.debug.cameraInfo(game.camera, 32, 32);
     *game.debug.spriteCoords(this.player, 32, 500);
 
-	},*/
+	},
+	*/
 
 
 }
