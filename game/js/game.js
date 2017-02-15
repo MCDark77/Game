@@ -24,10 +24,10 @@ MainGame.prototype =
 
 	preload: function() 
 	{
-		game.load.image("Player", "img/Player.png");
-		game.load.tilemap('test', 'Map/test.json', null, Phaser.Tilemap.TILED_JSON);
-		game.load.image('dirt', 'Map/Textures/Dirt.png');
-		game.load.spritesheet('spl', 'img/spritesheet/Player.png', 48, 64);
+		game.load.image("Player", "https://github.com/MCDark77/Game/img/Player.png");
+		game.load.tilemap('test', 'https://github.com/MCDark77/Game/Map/test.json', null, Phaser.Tilemap.TILED_JSON);
+		game.load.image('dirt', 'https://github.com/MCDark77/Game/Map/Textures/Dirt.png');
+		game.load.spritesheet('spl', 'https://github.com/MCDark77/Game/img/spritesheet/Player.png', 48, 64);
 	},
 	
 		
