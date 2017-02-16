@@ -24,17 +24,17 @@ MainGame.prototype =
 
 	preload: function() 
 	{
-		game.load.image("Player", "https://github.com/MCDark77/Game/tree/master/img/Player.png");
-		game.load.tilemap('test', 'https://github.com/MCDark77/Game/tree/master/Map/test.json', null, Phaser.Tilemap.TILED_JSON);
-		game.load.image('dirt', 'https://github.com/MCDark77/Game/tree/master/Map/Textures/Dirt.png');
-		game.load.spritesheet('spl', 'https://github.com/MCDark77/Game/tree/master/img/spritesheet/Player.png.png', 64, 64, 8);
+		game.load.image("Player", "img/Player.png");
+		game.load.tilemap('test', 'Map/test.json', null, Phaser.Tilemap.TILED_JSON);
+		game.load.image('dirt', 'Map/Textures/Dirt.png');
+		game.load.spritesheet('spl', 'img/spritesheet/Player.png.png', 64, 64, 8);
 	},
 	
 		
 	create: function() 
 	{
 		//this.scale.scaleMode = s;
-		console.log("Loaded v1.0 of Game by MCDark77");
+		console.log("Loaded v1.1 of Game by MCDark77");
 		this.btnUP = game.input.keyboard.addKey(Phaser.Keyboard.W);
 		this.btnDOWN = game.input.keyboard.addKey(Phaser.Keyboard.S);
 		this.btnLEFT = game.input.keyboard.addKey(Phaser.Keyboard.A);
