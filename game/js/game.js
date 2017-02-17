@@ -53,8 +53,8 @@ MainGame.prototype =
     	layer = map.createLayer('Ebene');
     	layer.resizeWorld();
     	game.world.setBounds(0, 0, 1920, 1920);
-    	this.btns_l = this.btnLEFT && this.LEFTbtn;
-    	this.btns_r = this.RIGHTbtn && this.btnRIGHT;
+    	this.btns_l = this.btnLEFT || this.LEFTbtn;
+    	this.btns_r = this.RIGHTbtn || this.btnRIGHT;
     	this.player = game.add.sprite(5, 300, 'spl');
     	game.camera.follow(this.player);
     	game.physics.arcade.enable(this.player);
