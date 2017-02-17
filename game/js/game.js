@@ -82,7 +82,7 @@ MainGame.prototype =
 		if(this.btnDOWN.isDown || this.DOWNbtn.isDown)	this.player.y = this.player.y +2,5;
 	 	if(this.btnLEFT.isDown || this.LEFTbtn.isDown) this.player.x = this.player.x - 2,5 && this.player.animations.play("idle_backward");  
 		if(this.btnRIGHT.isDown || this.RIGHTbtn.isDown) this.player.x = this.player.x + 2,5; 
-		if(this.btns_r.isUp && this.btns_l.isUp) this.player.animations.play("idle_forward"); else if(this.btns_r.isDown) this.player.animations.play("forward", 12, true); else if(this.LEFTbtn.isDown || this.btnLEFT.isDown) this.player.animations.play("backward", 12, true);
+		if(this.btns_r.isUp && this.btns_l.isUp) this.player.animations.play("idle_forward"); else if(this.btnRIGHT.isDown) this.player.animations.play("forward", 12, true); else if(this.RIGHTbtn.isDown) this.player.animations.play("forward", 12, true);
 		
 	},
 
