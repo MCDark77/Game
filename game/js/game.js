@@ -27,7 +27,7 @@ MainGame.prototype =
 		//game.load.image("Player", "Game/img/Player.png");
 		game.load.tilemap('test', 'Map/test.json', null, Phaser.Tilemap.TILED_JSON);
 		game.load.image('dirt', 'Map/Textures/Dirt.png');
-		game.load.spritesheet('spl', 'img/spritesheet/Player.png.png', 64, 64, 8);
+		game.load.spritesheet('spl', 'img/spritesheet/Player.png.png', 64, 64, 20);
 	},
 	
 		
@@ -53,17 +53,19 @@ MainGame.prototype =
     	layer = map.createLayer('Ebene');
     	layer.resizeWorld();
     	game.world.setBounds(0, 0, 1920, 1920);
-    	this.btns_l = this.btnLEFT && this.LEFTbtn;
-    	this.btns_r = this.RIGHTbtn && this.btnRIGHT;
-    	this.player = game.add.sprite(5, 300, 'spl');
+    	//this.btns_l = this.btnLEFT && this.LEFTbtn;
+    	//this.btns_r = this.RIGHTbtn && this.btnRIGHT;
+    	this.player =  game.add.sprite(5, 300, 'spl');
     	game.camera.follow(this.player);
     	game.physics.arcade.enable(this.player);
 		this.player.body.collideWorldBounds = true;
-		this.forward = this.player.animations.add('forward', [4,5,6,7]);
-		this.backward = this.player.animations.add('backward' [0,1,2,3]);
+		this.forward = this.player.animations.add('forward', [10,11,12,13]);
+		this.backward = this.player.animations.add('backward', [0,1,2,3]);
+		this.walkdown = this.player.animations.add('walkdown', [4,5,6,7,8,9]);
+		this.walkup = this.player.animations.add('walkup', [14,15,16,17,18,19]);
 		this.idle_forward = this.player.animations.add('idle_forward', [4]);
-		this.idle_backward = this.player.animations.add('idle_backward' [1]);
-		//this.player.animations.play("idle_backward");
+		this.idle_backward = this.player.animations.add('idle_backward' [0]);
+		this.player.animations.play("idle_backward");
 		
 
 
@@ -82,9 +84,14 @@ MainGame.prototype =
 		if(this.btnDOWN.isDown || this.DOWNbtn.isDown)	this.player.y = this.player.y +2,5;
 	 	if(this.btnLEFT.isDown || this.LEFTbtn.isDown) this.player.x = this.player.x - 2,5 && this.player.animations.play("backward", 12, true);  
 		if(this.btnRIGHT.isDown || this.RIGHTbtn.isDown) this.player.x = this.player.x + 2,5 && this.player.animations.play("forward", 12, true); 
-		if(this.btns_r.isUp && this.btns_l.isUp) this.player.animations.play("idle_forward"); /*else if(this.btnRIGHT.isDown) this.player.animations.play("forward", 12, true); else if(this.RIGHTbtn.isDown) this.player.animations.play("forward", 12, true);*/
-		
+		if(this.btnRIGHT.isUp && this.RIGHTbtn.isUp && this.LEFTbtn.isUp && this.btnLEFT.isUp && this.btnUP.isUp && this.btnDOWN.isUp && this.UPbtn.isUp && this.DOWNbtn.isUp) this.player.animations.play("idle_forward"); 
+		if(this.btnRIGHT.isDown || this.RIGHTbtn.isDown) this.player.animations.play("forward", 12, true);
+		if(this.LEFTbtn.isDown || this.btnLEFT.isDown) this.player.animations.play("backward", 12, true);
+		if(this.btnUP.isDown || this.UPbtn.isDown)	this.player.animations.play("walkup", 12, true);
+		if(this.btnDOWN.isDown || this.DOWNbtn.isDown)	this.player.animations.play("walkdown", 12, true);
 	},
+
+
 
 	/*render: function() 
 	*{

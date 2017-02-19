@@ -1,28 +1,44 @@
-{"frames": [
+{"frames": {
 
+"Player_walk_backward.png":
 {
-	"filename": "Player_walk_backward.png",
 	"frame": {"x":0,"y":0,"w":64,"h":256},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":256},
 	"sourceSize": {"w":64,"h":256}
 },
+"Player_walk_down.png":
 {
-	"filename": "Player_walk_foward.png",
-	"frame": {"x":0,"y":256,"w":64,"h":256},
+	"frame": {"x":0,"y":256,"w":64,"h":384},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":384},
+	"sourceSize": {"w":64,"h":384}
+},
+"Player_walk_foward.png":
+{
+	"frame": {"x":0,"y":640,"w":64,"h":256},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":256},
 	"sourceSize": {"w":64,"h":256}
-}],
+},
+"Player_walk_up.png":
+{
+	"frame": {"x":0,"y":896,"w":64,"h":384},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":384},
+	"sourceSize": {"w":64,"h":384}
+}},
 "meta": {
 	"app": "http://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "Player.png.png",
 	"format": "RGBA8888",
-	"size": {"w":64,"h":512},
+	"size": {"w":64,"h":1280},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:5ac59f4c06874f8d3b5ab849bd0cf267:aa02ffb4348af3b8456ccc0439086065:7bdc740644b34f4ecd52a0d2a9f09b2e$"
+	"smartupdate": "$TexturePacker:SmartUpdate:0c34def979a9ead7be7d45ddf4a45b28:a48b77205435bad28ccf728dbc5da1a6:7bdc740644b34f4ecd52a0d2a9f09b2e$"
 }
 }
